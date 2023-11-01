@@ -64,12 +64,12 @@ export const Transactions = () => {
             <div className='w-full bg-gray-50 dark:bg-gray-700 min-h-[200pt] shadow-xl p-4 rounded-2xl overflow-x-auto'>
 
                 <div className="w-full flex justify-end">
-                    <div className='shadow px-3 py-2 text-xs font-bold rounded-lg my-4 mx-2 text-sky-800 dark:text-sky-400'>
+                    <div className='shadow-md px-3 py-2 text-xs font-bold rounded-lg my-4 mx-2 text-sky-800 dark:text-sky-400'>
                         Average Gas: { averageGas } Gwei
                     </div>
                 </div>
                 
-                <table className='table table-auto w-full text-xs text-left border-2 border-gray-200 dark:border-gray-800 border-collapse text-gray-600 dark:text-gray-300'>
+                <table className='table table-auto w-full text-xs text-left border-2 border-gray-200 dark:border-gray-800 border-collapse text-gray-600 dark:text-gray-300 overflow-x-auto'>
                     <thead className='border-2 border-gray-200 dark:border-gray-600'>
                         <tr className='border-2 border-gray-200 dark:border-gray-600'>
                             <th className='p-2 border-2 border-gray-200 dark:border-gray-600 rounded-l-lg'>S/N</th>
