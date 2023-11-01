@@ -8,7 +8,7 @@ export const Web3Provider = ({ children }) => {
     const [web3, setWeb3] = useState(null)
 
     useEffect(() => {
-        const wsRpc = `wss://yolo-long-bridge.ethereum-sepolia.quiknode.pro/${TOKEN}`
+        const wsRpc = `wss://evocative-quaint-river.quiknode.pro/${TOKEN}`
         const provider = new Web3.providers.WebsocketProvider(wsRpc)
         const instance = new Web3(provider)
         
