@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# xPendin - Ethereum Transaction Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+xPendin is a React-based web application that tracks the 50 most recent transactions on the Ethereum mainnet. It continuously updates the list as new transactions occur and displays the transaction details in a user-friendly table format. This allows users to monitor the latest Ethereum transactions in real-time.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Real-time Transaction Tracking**: xPendin keeps you updated with the 50 most recent Ethereum transactions on the mainnet as they happen.
 
-### `npm start`
+- **Transaction Details**: For each transaction, the following information is displayed:
+  - Transaction Hash (Clickable for Etherscan)
+  - Sender's Address (Clickable for Sender's transactions on Etherscan)
+  - Receiver's Address (Clickable for Receiver's transactions on Etherscan)
+  - Data (hashed form)
+  - Amount of Ether Sent
+  - Gas (converted to Gwei)
+  - Gas Price (converted to Gwei)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Light and Dark Mode**: xPendin offers both light and dark mode options for user convenience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+1. Visit the [xPendin Website](https://xpendin.vercel.app) to access the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Explore the transaction table to view the most recent Ethereum transactions.
 
-### `npm run build`
+3. Click on any transaction hash or Ethereum address to access detailed information on Etherscan.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Toggle between light and dark mode based on your preference.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+xPendin is built using the following technologies:
 
-### `npm run eject`
+- React: A JavaScript library for building user interfaces.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Web3.js: A library for interacting with the Ethereum blockchain.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- QuickNode: A service used for connecting to the Ethereum mainnet and retrieving real-time transaction data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## xPendin Website Link
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Visit xPendin](https://xpendin.vercel.app)
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is released under the MIT License.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Support and Contribution
 
-### Code Splitting
+If you have any questions, encounter issues, or want to contribute to the project, feel free to do so by creating issues or pull requests on the project's GitHub repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **GitHub Repository**: [xPendin on GitHub](https://github.com/arewageek/xpendin)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Author**: [@arewageek](https://github.com/arewageek)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**License**: MIT
