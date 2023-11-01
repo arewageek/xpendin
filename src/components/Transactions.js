@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 import { Container } from './Container'
 import { Row } from './Row'
+import { Web3Context } from '../context/Web3Context'
 
-export const Transactions = ({ provider }) => {
-    const [web3, setWeb3] = useState(provider || null)
+export const Transactions = () => {
     const [transactions, setTransactions] = useState([])
 
-    useEffect(() => {
-        setWeb3(provider)
-    }, [provider])
+    const { web3 } = useContext(Web3Context)
 
     useEffect(() => {
         web3 && fetchTrx()

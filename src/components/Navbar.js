@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { MoonStarsFill, SunFill } from 'react-bootstrap-icons'
 
 export const Navbar = () => {
-    const [darkmode, setDarkmode] = useState(localStorage.getItem('darkmode') || false)
+    const [darkmode, setDarkmode] = useState(localStorage.getItem('darkmode') || true)
 
     useEffect(() => {
         localStorage.setItem('darkmode', darkmode)  
