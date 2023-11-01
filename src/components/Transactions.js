@@ -16,7 +16,7 @@ export const Transactions = ({ provider }) => {
     }, [web3])
 
     useEffect(() => {
-        // console.log(transactions)
+        transactions && console.log(transactions)
     }, [transactions])
 
     const fetchTrx = async () => {
@@ -24,14 +24,17 @@ export const Transactions = ({ provider }) => {
             // console.log(web3)
 
             if(web3){
+                const allData = []
                 const subscription = await web3.eth.subscribe('pendingTransactions')
                 subscription.on('data', async (data) => {
                     const trxByHash = await web3.eth.getTransaction(data);
-                    console.log(data)
-                    console.log(trxByHash)
-                    const fullList = transactions.push(data)
+                    // console.log(data)
+                    // const eachInfoBroken = trxByHash
+
+
+                    allData.unshift(trxByHash)
                 
-                    setTransactions(fullList);
+                    setTransactions(allData.slice(0,50));
                 })
             }
         }
@@ -50,6 +53,7 @@ export const Transactions = ({ provider }) => {
                             <th className='p-2 border-2 border-gray-200 dark:border-gray-600'>Block Hash</th>
                             <th className='p-2 border-2 border-gray-200 dark:border-gray-600'>From</th>
                             <th className='p-2 border-2 border-gray-200 dark:border-gray-600'>To</th>
+                            <th className='p-2 border-2 border-gray-200 dark:border-gray-600'>Data</th>
                             <th className='p-2 border-2 border-gray-200 dark:border-gray-600'>Value</th>
                             <th className='p-2 border-2 border-gray-200 dark:border-gray-600'>Gas Price</th>
                             <th className='p-2 border-2 border-gray-200 dark:border-gray-600 rounded-r-lg'>Max. Gas Price</th>
@@ -61,7 +65,7 @@ export const Transactions = ({ provider }) => {
                         { 
                             transactions.length > 0 ? (
                                 transactions.map((tx, index) => (
-                                    <Row data={transactions} index={index + 1} key={index + 1} />
+                                    <Row data={tx} index={index + 1} key={index + 1} />
                                 ))
                             )
                             : (
