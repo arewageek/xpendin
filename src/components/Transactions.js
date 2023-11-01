@@ -64,7 +64,7 @@ export const Transactions = () => {
             <div className='w-full bg-gray-50 dark:bg-gray-700 min-h-[200pt] shadow-xl p-4 rounded-2xl overflow-x-auto'>
 
                 <div className="w-full flex justify-end">
-                    <div className='shadow px-3 py-2 text-xs font-bold rounded-lg my-4 mx-2 text-sky-800'>
+                    <div className='shadow px-3 py-2 text-xs font-bold rounded-lg my-4 mx-2 text-sky-800 dark:text-sky-400'>
                         Average Gas: { averageGas } Gwei
                     </div>
                 </div>
