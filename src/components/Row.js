@@ -43,14 +43,14 @@ export const Row = ({ index, data }) => {
             </td>
             <td className='p-2 border-2 border-gray-200 dark:border-gray-600 font-semibold italic'>
                 {
-                    amount && Number(amount)
+                    amount && amount
                 } Eth
             </td>
             <td className='p-2 border-2 border-gray-200 dark:border-gray-600 font-semibold italic'>
-                { gas && gas } Gwei
+                { gas && Number(gas).toFixed(5) } Gwei
             </td>
             <td className='p-2 border-2 border-gray-200 dark:border-gray-600 font-semibold italic'>
-                { gasPrice && gasPrice } Gwei
+                { gasPrice && Number(gasPrice).toFixed(5) } Gwei
             </td>
         </tr>
         
